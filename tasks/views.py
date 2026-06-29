@@ -29,11 +29,11 @@ def signup(request):
             except IntegrityError:
                 return render(request, 'signup.html', {
                     'form': UserCreationForm,
-                    'error': 'Username already exists'
+                    'error': 'Usuario ya dado de alta'
                     } )
         return render(request, 'signup.html', {
                             'form': UserCreationForm,
-                            'error': 'Passwords do not match'
+                            'error': 'Las contrasenas no coinciden'
                             } )
 
 @login_required
